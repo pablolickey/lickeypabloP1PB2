@@ -6,8 +6,6 @@ import Biblioteca.Estudiante;
 import Biblioteca.Libro;
 import Biblioteca.Registro;
 
-import static org.junit.Assert.assertNotNull;
-
 import org.junit.Assert;
 
 public class BibliotecaTest {
@@ -39,10 +37,17 @@ public class BibliotecaTest {
 		String nombre="Algebra y Geometria Analitica 2";
 		String autor="Marcos Dias";
 		Libro libro= new Libro(codigo,nombre,autor);
-		Registro registro= new Registro(estudiante,libro,id);
+		libro.setPrestamo(Boolean.TRUE);
+		Integer codigo2=1234471;
+		String nombre2="Algebra y Geometria Analitica 1";
+		String autor2="Marcos Dias";
+		Libro libro2= new Libro(codigo2,nombre2,autor2);
+		libro2.setPrestamo(Boolean.TRUE);
+		Registro registro= new Registro(estudiante,libro,libro2,id);
 		Assert.assertNotNull(registro);
-		
 	}
+	
+	
 	
 	
 }
