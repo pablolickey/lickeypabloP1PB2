@@ -2,7 +2,7 @@ package Biblioteca;
 
 public class Registro {
 
-	private Estudiantes estudiante;
+	private Estudiante estudiante;
 	private Libro libro;
 	private Integer id;
 	

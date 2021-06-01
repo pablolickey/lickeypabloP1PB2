@@ -1,2 +1,3 @@
 module LickeyPablo {
+	requires junit;
 }
