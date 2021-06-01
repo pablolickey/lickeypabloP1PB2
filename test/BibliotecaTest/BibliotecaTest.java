@@ -40,6 +40,7 @@ public class BibliotecaTest {
 		String autor="Marcos Dias";
 		Libro libro= new Libro(codigo,nombre,autor);
 		Registro registro= new Registro(estudiante,libro,id);
+		Assert.assertNotNull(registro);
 		
 	}
 	
