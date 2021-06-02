@@ -81,6 +81,8 @@ public class BibliotecaTest {
 		Assert.assertNotNull(registro);
 		registro.AgregarRegistro(id,registro);
 		libro.setPrestamo(Boolean.FALSE);
+		registro.AgregarRegistro(id,registro);
+		Assert.assertFalse(libro.getPrestamo());
 	}
 	
 	
