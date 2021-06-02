@@ -35,18 +35,14 @@ public class BibliotecaTest {
 		String ayn="Juan Perez";
 		String dni="41.254.187";
 		Estudiante estudiante= new Estudiante(ayn,dni);
-		Integer codigo=123456;
-		String nombre="Algebra y Geometria Analitica 2";
+		Integer codigo=1234471;
+		String nombre="Algebra y Geometria Analitica 1";
 		String autor="Marcos Dias";
 		Libro libro= new Libro(codigo,nombre,autor);
 		libro.setPrestamo(Boolean.TRUE);
-		Integer codigo2=1234471;
-		String nombre2="Algebra y Geometria Analitica 1";
-		String autor2="Marcos Dias";
-		Libro libro2= new Libro(codigo2,nombre2,autor2);
-		libro2.setPrestamo(Boolean.TRUE);
-		Registro registro= new Registro(estudiante,libro,libro2,id);
+		Registro registro= new Registro(estudiante,libro,id);
 		Assert.assertNotNull(registro);
+		registro.AgregarRegistro(id,registro);
 	}
 	
 	@Test
