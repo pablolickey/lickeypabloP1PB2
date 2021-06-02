@@ -3,6 +3,7 @@ package BibliotecaTest;
 import org.junit.Test;
 
 import Biblioteca.Estudiante;
+import Biblioteca.Historia;
 import Biblioteca.Libro;
 import Biblioteca.Registro;
 
@@ -45,6 +46,26 @@ public class BibliotecaTest {
 		libro2.setPrestamo(Boolean.TRUE);
 		Registro registro= new Registro(estudiante,libro,libro2,id);
 		Assert.assertNotNull(registro);
+	}
+	
+	@Test
+	public void queSePuedaFotocopiarUnLibroDeHistoria() {
+		Integer codigo=12346551;
+		String nombre="Segunda Guerra Mundial";
+		String autor="Alejandro Gomes";
+		Historia libro= new Historia(codigo,nombre,autor);
+		Assert.assertNotNull(libro);
+		libro.fotocopiarLibro(Boolean.TRUE);
+	}
+	
+	@Test
+	public void queSePuedaFotocopiarUnLibroDeGeografia() {
+		Integer codigo=184542;
+		String nombre="Argentina y sus relieves";
+		String autor="Manuel Rodriguez";
+		Historia libro= new Historia(codigo,nombre,autor);
+		Assert.assertNotNull(libro);
+		libro.fotocopiarLibro(Boolean.TRUE);
 	}
 	
 	
