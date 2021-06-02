@@ -6,6 +6,7 @@ import Biblioteca.Estudiante;
 import Biblioteca.Geografia;
 import Biblioteca.Historia;
 import Biblioteca.Libro;
+import Biblioteca.Matematicas;
 import Biblioteca.Registro;
 
 import org.junit.Assert;
@@ -65,6 +66,22 @@ public class BibliotecaTest {
 		libro.fotocopiarLibro(Boolean.TRUE);
 	}
 	
+	@Test
+	public void queSePuedaDevolverUnLibro() {
+		Integer id=1;
+		String ayn="Juan Perez";
+		String dni="41.254.187";
+		Estudiante estudiante= new Estudiante(ayn,dni);
+		Integer codigo=1234471;
+		String nombre="Algebra y Geometria Analitica 1";
+		String autor="Marcos Dias";
+		Libro libro= new Libro(codigo,nombre,autor);
+		libro.setPrestamo(Boolean.TRUE);
+		Registro registro= new Registro(estudiante,libro,id);
+		Assert.assertNotNull(registro);
+		registro.AgregarRegistro(id,registro);
+		libro.setPrestamo(Boolean.FALSE);
+	}
 	
 	
 	
