@@ -2,6 +2,8 @@ package Biblioteca;
 
 import java.util.ArrayList;
 
+import org.junit.Assert;
+
 public class Registro {
 	private Estudiante estudiante;
 	private Libro libro;
@@ -12,10 +14,12 @@ public class Registro {
 	
 	
 	public Registro(Estudiante estudiante, Libro libro,Integer id) {
-		this.estudiante=estudiante;
-		this.libro=libro;
-		this.libro2=libro2;
-		this.id=id;
+		if(!libro.getPrestamo()) {			
+			this.estudiante=estudiante;
+			this.libro=libro;
+			this.libro2=libro2;
+			this.id=id;
+		}
 	}
 	
 	public void AgregarRegistro(int id, Registro registro) {
