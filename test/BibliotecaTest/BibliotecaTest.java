@@ -3,6 +3,7 @@ package BibliotecaTest;
 import org.junit.Test;
 
 import Biblioteca.Estudiante;
+import Biblioteca.Geografia;
 import Biblioteca.Historia;
 import Biblioteca.Libro;
 import Biblioteca.Registro;
@@ -63,7 +64,7 @@ public class BibliotecaTest {
 		Integer codigo=184542;
 		String nombre="Argentina y sus relieves";
 		String autor="Manuel Rodriguez";
-		Historia libro= new Historia(codigo,nombre,autor);
+		Geografia libro= new Geografia(codigo,nombre,autor);
 		Assert.assertNotNull(libro);
 		libro.fotocopiarLibro(Boolean.TRUE);
 	}
