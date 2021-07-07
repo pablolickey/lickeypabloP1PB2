@@ -1,19 +1,14 @@
 package Biblioteca;
 
-public class Geografia extends Libro {
-
-	private Boolean impresion=Boolean.FALSE;
+public class Geografia extends Libro implements Fotocopiable {
 	
 	public Geografia(Integer codigo, String nombre, String autor) {
 		super(codigo, nombre, autor);
 	}
 
-	public String fotocopiarLibro(Boolean impresion) {
-		this.impresion=impresion;
-		if(this.impresion) {
-			return this.getNombre();
-		}
-		return null;
+	@Override
+	public String puedoSerFotocopiado() {
+		return super.getNombre();
 	}
 	
 }

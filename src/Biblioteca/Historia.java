@@ -1,19 +1,15 @@
 package Biblioteca;
 
-public class Historia extends Libro {
+public class Historia extends Libro implements Fotocopiable {
 
-	private Boolean impresion=Boolean.FALSE;
 
 	public Historia(Integer codigo, String nombre, String autor) {
 		super(codigo, nombre, autor);
 	}
 	
-	public String fotocopiarLibro(Boolean impresion) {
-		this.impresion=impresion;
-		if(this.impresion) {
-			return this.getNombre();
-		}
-		return null;
+	@Override
+	public String puedoSerFotocopiado() {
+		return super.getNombre();
 	}
-
+	
 }
